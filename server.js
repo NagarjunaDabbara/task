@@ -20,7 +20,7 @@ app.use('/api/smtp',smtpRouter)
 
 
 // Connect to MongoDB
-const URI = "mongodb+srv://arjun123:arjun123@social-network-me8jg.mongodb.net/test?retryWrites=true&w=majority"
+const URI = process.env.MONGODB_URI
 mongoose.connect(URI, {
     useCreateIndex: true,
     useFindAndModify: false,
